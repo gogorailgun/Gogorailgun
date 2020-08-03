@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 /*
   	
   	1. 노래 한곡을 저장할 클래스를 정의하고
+  		곡명, 가수, 작곡가, 재생시간(문자열)
   	   앨범 한장에(12곡) 을 저장할 배열을 만들고
   	   내용을 출력하는 프로그램을 작성하세요.
 
@@ -40,7 +41,7 @@ public class Ex01 {
 //노래 한곡을 저장할 클래스
 class Album{
 	int track;
-	String songName, songwriter, Lyrics, arrage;
+	String songName, songwriter, Lyrics, runtTime;
 	
 	public Album[] getAlbum() {
 		Album[] mArr = new Album[12];
@@ -49,7 +50,7 @@ class Album{
 		String[] songNames = getSongName();
 		String[] songwriters = getSongwriter();
 		String[] Lyricss = getLyrics();
-		String[] arrages = getArrage();
+		String[] runtTime = getRuntTime();
 	
 		
 		for(int i = 0; i < getTrack().length ; i++) {
@@ -59,7 +60,7 @@ class Album{
 			mArr[i].songName = songNames[i];
 			mArr[i].songwriter = songwriters[i];
 			mArr[i].Lyrics = Lyricss[i];
-			mArr[i].arrage = arrages[i];
+			mArr[i].runtTime = runtTime[i];
 			
 		}
 		
@@ -89,10 +90,10 @@ class Album{
 							"아이유","아이유"};
 	}
 	
-	public String[] getArrage() {
-		return new String[] {"정석원","haihm","박용준","이민수","정석원","이적,양시온",
-							"G.고릴라","권태은","김형석, 류영민","Ra.D","G.고릴라",
-							"Corinne Bailey Rae, Rod Bowkett"};
+	public String[] getRuntTime() {
+		return new String[] {"4:04","3:34","3:58","3:58","3:40","3:24",
+							"3:33","3:33","6:07","Ra.D","4:01",
+							"3:14","3:02"};
 	}
 	
 	public void toPrint() {
@@ -100,7 +101,7 @@ class Album{
 		System.out.println("-------------"+songName+"의 곡정보---------------");
 		System.out.println("---------------------------------------------");
 		System.out.printf("트랙번호 : %2d\n노래제목 : %-26s\n작 곡 가 : %-26s \n"
-				+ "작 사 가 : %-26s \n편    곡 : %-31s\n", track, songName, songwriter, Lyrics, arrage );
+				+ "작 사 가 : %-26s \n재생시간 : %4s\n", track, songName, songwriter, Lyrics, runtTime );
 		System.out.println("=============================================");
 	}
 	

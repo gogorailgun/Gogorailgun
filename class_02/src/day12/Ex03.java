@@ -18,11 +18,26 @@ package day12;
 public class Ex03 {
 
 	public Ex03() {
-		
+	//	fromName();
+	//	nameAndId();
 	}
 	
 	public static void main(String[] args) {
 		new Ex03();
 	}
-
+	
+	public void fromName() {
+		// 이름을 입력해서 객체를 만들고 출력해보자.
+		Jojikwon member = new Jojikwon("장발장");
+		member.mno = 1001;
+		member.id = "JYJ";
+		member.mail = "ihatebread@increpas.com";
+		System.out.println(member);
+		
+		
+	}
+	public void nameAndId() {
+		Jojikwon member = new Jojikwon("조충현","cndgus123");
+		//member.name =
+	}
 }

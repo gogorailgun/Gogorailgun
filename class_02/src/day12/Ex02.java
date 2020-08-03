@@ -21,12 +21,48 @@ package day12;
 public class Ex02 {
 
 	public Ex02() {
-		
+		//setOne();
+		setThree();
 	}
 	
 	public static void main(String[] args) {
 		new Ex02();
 		
 	}
+	
+		
+	// 한명의 데이터 만들고 출력하기
+	public void setOne() {
+		int java = (int)(Math.random()*26+70);
+		int oracle = (int)(Math.random()*26+70);
+		int html = (int)(Math.random()*26+70);
+		int jsp = (int)(Math.random()*26+70);
+		
+		Stud student = new Stud(java,oracle,html,jsp);
+		
+		System.out.println(student);
+		// 클래스의 주소를 호출하게 되면 자동으로 toString함수를 호출하게 된다.
+	}
 
+	// 3명의 데이터를 만들고 출력해보자.
+	public void setThree() {
+		// 세명의 점수가 필요하므로 배열로 만들어 처리한다.
+		Stud[] students = new Stud[3]; // 방만 3개 만듬
+		
+		for(int i = 0; i < students.length; i++) {
+			
+			int java = (int)(Math.random()*26+70);
+			int oracle = (int)(Math.random()*26+70);
+			int html = (int)(Math.random()*26+70);
+			int jsp = (int)(Math.random()*26+70);
+			
+			students[i] = new Stud(java, oracle, html, jsp);
+		}
+		
+		// 출력한다
+	
+		for(Stud st : students) {
+			System.out.println(st);
+		}
+	}
 }

@@ -12,11 +12,15 @@ package day12;
 public class Ex04 {
 
 	public Ex04() {
-		
+		String str = getString();
 	}
 	
 	public static void main(String[] args) {
 		new Ex04();
+	}
+	
+	public String getString() {
+		return "";
 	}
 
 }
