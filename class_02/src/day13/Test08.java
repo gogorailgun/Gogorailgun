@@ -29,22 +29,22 @@ public class Test08 {
 		 		을 만들어서 Nemo 타입의 배열에 입력하고
 		 		하나씩 꺼내서 출력하세요.
 		 */
-		
+		// 0~10까지 랜덤한 숫자
 		int num1 = (int)(Math.random()*11);
 		
-		Nemo[] nArr = new Nemo[10];
+		Nemo[] nArr = new Nemo[10]; // 방 만드는 선언
 		
 		for(int i = 0; i<10; i++) {
 			
 			int num = (int)(Math.random()*11);
 				
-			if(num%2 == 0) {
-				int num2 = (int)(Math.random()*13 + 3);
+			if(num%2 == 0) { // 홀수인경우 정사각형을 만들어서 넣어준다.
+				int num2 = (int)(Math.random()*13 + 3); // 3~15
 				int num3 = (int)(Math.random()*13 + 3);
 				
 				Rectangle Jiksagak = new Rectangle(num2,num3);
 				nArr[i] = Jiksagak;
-			} else {
+			} else { // 짝수인 경우고 직사각형을 만들어서 넣어주면 된다
 				int num3 = (int)(Math.random()*13 + 3);
 				Square Jeongsagak = new Square(num3); 
 				nArr[i] = Jeongsagak;

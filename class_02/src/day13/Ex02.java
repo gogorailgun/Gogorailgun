@@ -50,10 +50,20 @@ class Sagak extends Figure{
 	public Sagak(int width, int height) {
 		this.width = width;
 		this.height = height;
-		area = width * height;
+		 
 	}
 	double getArea(){
-		return area;
+		
+		/*
+		 getArea()를 오버라이딩
+		 
+		  방법 ]
+		  	
+		  		1. 함수의원형은 유지한다. 함수의 원형 = 반환값타입 + 함수이름 + 매개변수리스트
+		  		2. 접근지정자는 같ㅌ거나 넓은 방향으로 한다.
+		  
+		  */ 
+		return width * height;
 	}
 	
 	public String toString() {
@@ -94,6 +104,6 @@ class Dongle extends Figure{
 	}
 	
 	public String toString() {
-		return "이것은 반지름이"+ radius + " 둘레가 " + area + "넓이가" + area + "인 원입니다";
+		return "이것은 반지름이"+ radius + " 둘레가 " + round + "넓이가" + area + "인 원입니다";
 	}
 }
