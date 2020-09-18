@@ -2,7 +2,7 @@ package DB;
 
 /**
  * 
- * @author 	전은석
+ * @author 	정현욱
  * @since	2020.09.17
  * @version	v.1.0
  *
