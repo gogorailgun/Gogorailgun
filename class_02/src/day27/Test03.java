@@ -32,7 +32,6 @@ public class Test03 {
 		String pcode = sc.next();
 		System.out.println("작업 코드를 입력하세요! : ");
 		
-		Connection con = db.getCon();
 		
 		
 		switch(pcode) {
